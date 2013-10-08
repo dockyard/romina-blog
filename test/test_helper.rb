@@ -2,6 +2,8 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
+require 'valid_attribute'
+require 'minitest/matchers'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -13,4 +15,26 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  
+  class << self
+    alias :context :describe
+  end
+
+  include ::ValidAttribute::Method
+
+  def self.must(&block)
+    it { subject.must instance_eval(&block) }
+  end
+
+  def self.wont(&block)
+    it { subject.wont instance_eval(&block) }
+  end
+
+  def must(*args, &block)
+    subject.must(*args, &block)
+  end
+
+  def wont(*args, &block)
+    subject.wont(*args, &block)
+  end
 end
