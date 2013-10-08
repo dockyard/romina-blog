@@ -1,0 +1,3 @@
+class ReaderUser < User
+
+end

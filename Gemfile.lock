@@ -66,6 +66,8 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     columnize (0.3.6)
+    context_validations (0.1.1)
+      activesupport
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -184,6 +186,7 @@ DEPENDENCIES
   capybara
   capybara_minitest_spec
   coffee-rails (~> 4.0.0)
+  context_validations
   easy_auth!
   easy_auth-password!
   haml-rails
