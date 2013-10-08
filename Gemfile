@@ -3,11 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
+gem 'easy_auth', github: 'dockyard/easy_auth', ref: 'f24ce212d28bde1c8d06d704249c4a628a910f98'
+gem 'easy_auth-password', github: 'dockyard/easy_auth-password'
+
+gem 'haml-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 2.3.2.1'
+
+gem 'simple_form'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -32,9 +38,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'byebug'
+end
+
 group :test do
   gem 'capybara'
   gem 'minitest-rails-capybara'
+  gem 'capybara_minitest_spec'
+  gem 'minitest-matchers'
+  gem 'valid_attribute'
 end
 
 # Use ActiveModel has_secure_password
