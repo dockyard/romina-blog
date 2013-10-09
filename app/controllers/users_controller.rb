@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user = AdminUser.new(user_params) if params[:user][:type] == 'admin'
+    @user = ReaderUser.new(user_params) if params[:user][:type] == 'reader'
 
     if @user.save
       @user.reload
