@@ -8,6 +8,7 @@ feature 'Signing up' do
     fill_in 'Email', with: 'test_user@example.com'
     fill_in('Password', with: 'password', :match => :prefer_exact)
     fill_in('Password confirmation', with: 'password', :match => :prefer_exact)
+    page.select('reader', from: 'user_type')
     click_button 'Sign up'
 
     current_path.must_equal root_path

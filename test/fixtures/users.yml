@@ -2,3 +2,4 @@
 
 reader:
   email: test@example.com
+  type : AdminUser

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe User do
-  subject { User.new(password: 'password')}
+  subject { User.new(password: 'password', type: 'AdminUser')}
   # Test for password, password_confirmation, email uniqueness
 
   it { must have_valid(:email).when('test_user@example.com') }
@@ -16,5 +16,10 @@ describe User do
     it { wont have_valid(:password).when(nil, '') }
     it { must have_valid(:password_confirmation).when('password') }
     it { wont have_valid(:password_confirmation).when('otherpassword', '') }
+  end
+
+  context 'type' do
+    it { must have_valid(:type).when('ReaderUser', 'AdminUser') }
+    it { wont have_valid(:type).when(nil, '') }
   end
 end
