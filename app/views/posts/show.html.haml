@@ -2,3 +2,12 @@
   %h1= @post.title
 
 .blog-content= @post.content
+
+- if current_user
+  %h3 Comment:
+  = simple_form_for [@post, @comment] do |f|
+    %p= f.input :content, as: :text
+
+    %p= f.submit 'Submit', class: 'btn'
+
+= render @post.comments

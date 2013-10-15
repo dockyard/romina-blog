@@ -2,7 +2,7 @@
   %h1 Posts
 
 - if current_user.class == 'AdminUser'.constantize
-  .btn= link_to 'New post', new_post_path
+  = link_to 'New post', new_post_path, class: 'btn'
 
 - @posts.each do |post|
   .blog-post

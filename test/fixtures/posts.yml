@@ -2,7 +2,7 @@
 
 one:
   admin_user_id: 1
-  title: MyString
+  title: MyPost
   content: MyText
 
 two:
