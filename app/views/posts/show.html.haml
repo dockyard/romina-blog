@@ -1,6 +1,10 @@
 .page-header
   %h1= @post.title
 
+- if current_user
+  - if @post.admin_user_id == current_user.id
+    = link_to 'Edit', [:edit, @post], class: 'btn'
+
 .blog-content= @post.content
 
 - if current_user
