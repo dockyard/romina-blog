@@ -6,5 +6,5 @@
 
 - @posts.each do |post|
   .blog-post
-    .blog-title= post.title
+    .blog-title= link_to post.title, post
     %hr
