@@ -1,5 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-reader:
+admin:
   email: test@example.com
   type : AdminUser

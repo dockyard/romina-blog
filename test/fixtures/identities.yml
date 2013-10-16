@@ -1,5 +1,5 @@
 reader_password_identity:
-  account: reader (User)
+  account: admin (User)
   uid:     test@example.com
   type:    'Identities::Password'
   token:   '400$8$10$64cde78aa40ca29f$cd73a5c68bc4c65b238c98d8dee9ed7872c14500581ae0a15deca94c21a9f739'
