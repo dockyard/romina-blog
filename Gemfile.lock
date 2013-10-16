@@ -70,6 +70,7 @@ GEM
     context_validations (0.1.1)
       activesupport
     debugger-linecache (1.2.0)
+    destroyed_at (0.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
     ffi (1.9.0)
@@ -190,6 +191,7 @@ DEPENDENCIES
   capybara_minitest_spec
   coffee-rails (~> 4.0.0)
   context_validations
+  destroyed_at
   easy_auth!
   easy_auth-password!
   haml-rails
