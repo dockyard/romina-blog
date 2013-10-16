@@ -49,6 +49,7 @@ group :test do
   gem 'capybara_minitest_spec'
   gem 'minitest-matchers'
   gem 'valid_attribute'
+  gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password

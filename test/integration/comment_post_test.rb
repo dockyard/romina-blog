@@ -1,7 +1,6 @@
 require 'test_helper'
 
 feature 'user comments on a post when signed in' do
-  fixtures :users, :posts
 
   before do
     visit root_path
