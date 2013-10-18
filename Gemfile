@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'simple_form'
 gem 'context_validations'
 gem 'destroyed_at'
+gem 'pages'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

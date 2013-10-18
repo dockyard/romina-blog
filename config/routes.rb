@@ -3,6 +3,8 @@ RominaBlog::Application.routes.draw do
   easy_auth_routes
 
   get '/destroyed' => 'posts#destroyed'
+  page :about
+
   resources :posts do
     put 'restore'
     resources :comments

@@ -120,6 +120,8 @@ GEM
     multi_json (1.8.1)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    pages (0.2.0)
+      rails (> 3.2)
     pg (0.17.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -200,6 +202,7 @@ DEPENDENCIES
   launchy
   minitest-matchers
   minitest-rails-capybara
+  pages
   pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)

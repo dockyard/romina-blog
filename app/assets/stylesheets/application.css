@@ -21,3 +21,7 @@ body {
 .btn a:hover {
   text-decoration: none;
 }
+
+input[value='Sign up'] {
+  display: block;
+}
