@@ -3,6 +3,7 @@
 
 - if current_user.class == 'AdminUser'.constantize
   = link_to 'New post', new_post_path, class: 'btn'
+  = link_to 'Deleted posts', destroyed_path, class: 'btn'
 
 - @posts.each do |post|
   .blog-post

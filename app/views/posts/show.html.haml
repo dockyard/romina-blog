@@ -2,7 +2,7 @@
   %h1= @post.title
 
 - if current_user
-  - if @post.admin_user_id == current_user.id
+  - if current_user.can_admin?(@post)
     = link_to 'Edit', [:edit, @post], class: 'btn'
     = link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}, class: 'btn'
 

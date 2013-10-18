@@ -46,6 +46,16 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def destroyed
+    @posts = Post.destroyed
+  end
+
+  def restore
+    @post = Post.unscoped.find(params[:post_id])
+    @post.restore
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
@@ -53,7 +63,7 @@ class PostsController < ApplicationController
   end
 
   def base_validations
-    validates :title, presence: true, uniqueness: true
+    validates :title, presence: true, uniqueness: { conditions: -> { where(destroyed_at: nil) } }
     validates :content, presence: true
   end
 end
