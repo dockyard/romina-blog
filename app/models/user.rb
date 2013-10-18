@@ -3,7 +3,11 @@ class User < ActiveRecord::Base
   include ContextValidations::Model
   has_many :comments, dependent: :destroy
 
-  def can_admin?(post)
-    post.admin_user_id == self.id
+  def can_admin?(resource)
+    resource.admin_user_id == self.id
+  end
+
+  def is_admin?
+    AdminUser === self
   end
 end

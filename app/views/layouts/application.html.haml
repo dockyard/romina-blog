@@ -26,6 +26,7 @@
             %a.brand{:href => root_path} Romina's Blog
           .container.nav-collapse
             %ul.nav
+              %li= link_to 'About', about_path
               - if current_user
                 %li= link_to 'Sign out', sign_out_path
               - else

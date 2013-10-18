@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   include ContextValidations::Controller
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('id DESC')
   end
 
   def show
